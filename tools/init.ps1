@@ -1,3 +1,3 @@
 ﻿param($installPath, $toolsPath, $package)
 
-Import-Module (Join-Path $toolsPath npm.psm1)
+$env:path="$env:path;$toolsPath"
