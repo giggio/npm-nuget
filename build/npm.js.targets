@@ -8,8 +8,16 @@
 	</PropertyGroup>
   <PropertyGroup>
     <NpmExec><![CDATA[
-      IF EXIST "%VS110COMNTOOLS%VsDevCmd.bat" ("%VS110COMNTOOLS%VsDevCmd.bat") else (echo VS 11 Common Tools not found)
-      IF EXIST "%VS120COMNTOOLS%VsDevCmd.bat" ("%VS120COMNTOOLS%VsDevCmd.bat") else (echo VS 12 Common Tools not found)
+      IF EXIST "%VS110COMNTOOLS%VsDevCmd.bat" (
+      call "%VS110COMNTOOLS%VsDevCmd.bat"
+      ) ELSE (
+      echo VS 11 Common Tools not found
+      )
+      IF EXIST "%VS120COMNTOOLS%VsDevCmd.bat" (
+      call "%VS120COMNTOOLS%VsDevCmd.bat"
+      ) ELSE (
+      echo VS 12 Common Tools not found
+      )
       set PATH=$(MSBuildThisFileDirectory)..\tools\;%PATH%
       $(MSBuildThisFileDirectory)..\tools\npm install"
       ]]></NpmExec>
