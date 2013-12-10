@@ -1,3 +1,6 @@
 param($installPath, $toolsPath, $package, $project)
 
-cp $toolsPath\package.json $installPath\..\..\package.json
+$destinationPackageJSON = join-path $installPath "..\..\package.json"
+if (!([System.IO.File]::Exists($destinationPackageJSON))){
+  cp $toolsPath\package.json $destinationPackageJSON
+};
