@@ -19,7 +19,7 @@
       echo VS 12 Common Tools not found
       )
       set PATH=$(MSBuildThisFileDirectory)..\tools\;%PATH%
-      "$(MSBuildThisFileDirectory)..\tools\npm" install"
+      "$(MSBuildThisFileDirectory)..\tools\npm" install
       ]]></NpmExec>
   </PropertyGroup>
 	<Target Name="RestoreNpmPkgs">
