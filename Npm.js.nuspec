@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
+    <metadata minClientVersion="2.7">
         <id>Npm.js</id>
-        <version>1.3.15.7</version>
+        <version>1.3.15.8</version>
         <title>Npm.js</title>
         <authors>Isaacs</authors>
         <owners>giggio</owners>
@@ -15,13 +15,13 @@ https://npmjs.org/</description>
         <summary />
         <copyright>Copyright (c) Isaac Z. Schlueter</copyright>
         <tags>node nodejs npm</tags>
+        <developmentDependency>true</developmentDependency>
         <dependencies>
             <dependency id="Node.js" version="0.10.21" />
         </dependencies>
     </metadata>
     <files>
         <file src="build\npm.js.targets" target="build\npm.js.targets" />
-        <file src="content\npmPlaceholder.txt" target="content\npmPlaceholder.txt" />
         <file src="tools\node_modules\npm\bin\node-gyp-bin\node-gyp" target="tools\node_modules\npm\bin\node-gyp-bin\node-gyp" />
         <file src="tools\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" target="tools\node_modules\npm\bin\node-gyp-bin\node-gyp.cmd" />
         <file src="tools\node_modules\npm\bin\npm" target="tools\node_modules\npm\bin\npm" />
