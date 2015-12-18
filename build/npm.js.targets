@@ -18,6 +18,11 @@
       ) ELSE (
       echo VS 12 Common Tools not found
       )
+      IF EXIST "%VS140COMNTOOLS%VsDevCmd.bat" (
+      call "%VS140COMNTOOLS%VsDevCmd.bat"
+      ) ELSE (
+      echo VS 14 Common Tools not found
+      )
       set PATH=$(MSBuildThisFileDirectory)..\tools\;%PATH%
       "$(MSBuildThisFileDirectory)..\tools\npm" install
       ]]></NpmExec>
